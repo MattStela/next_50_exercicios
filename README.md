@@ -111,7 +111,7 @@ Este repositório contém uma série de exercícios desenvolvidos usando o frame
 
 ## Como Usar
 
-Clone o repositório:
-    ```bash
+Clone o repositório:<br>
+    ```bash<br>
     git clone https://github.com/MattStela/next_50_exercicios.git
 
