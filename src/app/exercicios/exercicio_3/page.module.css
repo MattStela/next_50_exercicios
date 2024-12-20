@@ -1,0 +1,9 @@
+.button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color:black;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: large;
+    background: linear-gradient(to top, #ff7e5f, #feb47b)
+}
