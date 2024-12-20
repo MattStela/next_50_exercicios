@@ -16,6 +16,7 @@ export default function Home() {
       <CustomButton destination="/exercicios/exercicio_11" label="Exercicio 11"  />
       <CustomButton destination="/exercicios/exercicio_12" label="Exercicio 12"  />
       <CustomButton destination="/exercicios/exercicio_13" label="Exercicio 13"  />
+      <CustomButton destination="/exercicios/exercicio_14" label="Exercicio 14"  />
 
       </main>
     </div>
