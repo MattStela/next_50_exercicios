@@ -218,4 +218,4 @@ Clone o repositório:
 
     git clone https://github.com/MattStela/next_50_exercicios.git
 
-### estamos ao vivo em [text](https://next-50-exercicios.vercel.app/)
+### estamos ao vivo em [Projeto 50 exercícios ou morra tentando](https://next-50-exercicios.vercel.app/)
