@@ -217,3 +217,5 @@ Clone o repositório:
     ```bash
 
     git clone https://github.com/MattStela/next_50_exercicios.git
+
+### estamos ao vivo em [text](https://next-50-exercicios.vercel.app/)
