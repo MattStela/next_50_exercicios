@@ -2,6 +2,8 @@
 
 Esse é um projeto feito com Next.js contendo 50 exercícios. Fazer exercício é bom para aumentar o músculo, mas será que meu cérebro fica maior?
 
+### estou ao vivo em [Projeto 50 exercícios ou morra tentando][def]
+
 ## Descrição
 
 Este repositório contém uma série de exercícios desenvolvidos usando o framework Next.js. Cada exercício aborda diferentes aspectos e funcionalidades do Next.js, proporcionando uma maneira prática de aprender e dominar a ferramenta.
@@ -218,4 +220,6 @@ Clone o repositório:
 
     git clone https://github.com/MattStela/next_50_exercicios.git
 
-### estamos ao vivo em [Projeto 50 exercícios ou morra tentando](https://next-50-exercicios.vercel.app/)
+
+
+[def]: https://next-50-exercicios.vercel.app/
