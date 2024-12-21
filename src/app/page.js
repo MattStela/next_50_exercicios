@@ -12,13 +12,14 @@ export default function Home() {
         const response = await fetch('https://raw.githubusercontent.com/MattStela/next_50_exercicios/main/README.md');
         const text = await response.text();
         
-        // Numerar os itens do exercício e adicionar duas quebras de linha antes de cada número
-        const numberedContent = text.replace(/(\d+)\.\s([^\n]+)/g, (match, number, title) => {
-          const num = parseInt(number, 10);
-          return `\n\n**${num}.** ${title}`;
-        });
+        // Logar o conteúdo do README.md
+        console.log(text);
+        
+        const formattedContent = text.replace(/(\d+)\.\s([^\n]+)/g, (match, number, title) => {
+          return `**${number}.** ${title}`;
+        }).replace(/\n\s*-\s/g, ' / ');
 
-        setContent(numberedContent);
+        setContent(formattedContent);
       } catch (error) {
         console.error('Error fetching README:', error);
       }
@@ -35,3 +36,5 @@ export default function Home() {
     </div>
   );
 }
+
+
