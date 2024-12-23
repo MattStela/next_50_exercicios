@@ -84,7 +84,7 @@ export default function Home() {
   return (
     <ApolloProvider client={client}>
       <main className="min-h-screen flex items-center justify-center">
-        <div className="border flex flex-col justify-center items-center p-10">
+        <div className="flex flex-col justify-center items-center p-10">
           <p>18. Exemplo de Apollo Client com GraphQL</p>
           <br></br>
           <div>
@@ -112,12 +112,13 @@ export default function Home() {
             <p>
               Veja abaixo o código do componente <code>DataComponent</code>:
             </p>
-          </div>
+          </div><br></br>
 
           <form onSubmit={handleSearch} className="flex flex-col items-center">
+            <label>digite o nome de um país</label><br></br>
             <input
               type="text"
-              placeholder="Digite o nome do país"
+              placeholder="Digite Brazil, United States, etc."
               value={filter}
               onChange={handleInputChange}
               className="text-black mb-4 p-2 border border-gray-300 rounded"

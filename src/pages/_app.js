@@ -1,16 +1,9 @@
+import { appWithTranslation } from 'next-i18next';
 import '../app/globals.css';
-import Header from '../app/components/header';
-import Footer from '../app/components/footer';
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
-    </>
-  );
+  return <Component {...pageProps} />;
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);
 

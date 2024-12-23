@@ -1,0 +1,9 @@
+{
+  "welcome": "Welcome",
+  "description": "This is an example description.",
+  "button_submit": "Submit",
+  "button_cancel": "Cancel",
+  "error_message": "An error occurred. Please try again.",
+  "header_title": "My Application",
+  "footer_text": "All rights reserved."
+}
