@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 
 export default function Home() {
   const [content, setContent] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchReadme = async () => {
@@ -27,8 +28,10 @@ export default function Home() {
           }) // Remove two line breaks before every number from 2 to 50
 
         setContent(formattedContent);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching README:", error);
+        setLoading(false);
       }
     };
 
@@ -38,8 +41,8 @@ export default function Home() {
   return (
     <div className="break-words grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="break-words gap-4 row-start-2 items-center sm:items-start w-full">
-        <div className="w-full break-all whitespace-pre-wrap">
-          {content}
+        <div className="w-full break-all whitespace-pre-wrap flex items-center justify-center min-h-screen">
+          {loading ? "Carregando README.md do GitHub..." : content}
         </div>
       </main>
     </div>
