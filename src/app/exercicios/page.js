@@ -12,7 +12,8 @@ export default function Home() {
         {exercicios.map((num) => {
           const exercicioPath = path.join(process.cwd(), `src/app/exercicios/exercicio_${num}`);
           if (fs.existsSync(exercicioPath)) {
-            return <CustomButton key={num} destination={`/exercicios/exercicio_${num}`} label={`Exercicio ${num}`} />;
+            const formattedNum = num.toString().padStart(2, '0'); // Adicione um zero à esquerda para números de 1 a 9
+            return <CustomButton key={num} destination={`/exercicios/exercicio_${num}`} label={`Exercicio ${formattedNum}`} />;
           }
           return null;
         })}

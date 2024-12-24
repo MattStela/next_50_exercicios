@@ -19,7 +19,12 @@ export default function Home() {
           .replace(/\n\s*-\s/g, " / ")
           .replace(/#/g, "") // Remove all #
           .replace(/\*/g, "") // Remove all *
-          .replace(/\[def\]/g, "").replace(/: https:\/\/next-50-exercicios\.vercel\.app\/?/g, ""); // Remove the [def]
+          .replace(/\[def\]/g, "") // Remove all [def]
+          .replace(/: https:\/\/next-50-exercicios\.vercel\.app\/?/g, "") // Remove the URL
+          .replace(/\n\n(?=\d{1,2}\.\s)/g, (match, offset, string) => {
+            const number = parseInt(string.substring(offset + 2, offset + 4), 10);
+            return number >= 2 && number <= 50 ? "" : match;
+          }) // Remove two line breaks before every number from 2 to 50
 
         setContent(formattedContent);
       } catch (error) {
