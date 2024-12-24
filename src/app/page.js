@@ -12,9 +12,6 @@ export default function Home() {
         );
         const text = await response.text();
 
-        // Logar o conteúdo do README.md
-        console.log(text);
-
         const formattedContent = text
           .replace(/(\d+)\.\s([^\n]+)/g, (match, number, title) => {
             return `${number}. ${title}`;
