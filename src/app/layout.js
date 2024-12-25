@@ -1,4 +1,5 @@
-import React from 'react'; // Certifique-se de importar o React
+import React from 'react';
+import Head from 'next/head';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
@@ -24,7 +25,11 @@ export const viewport = "width=device-width, initial-scale=1.0";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-
+      <Head>
+        <link rel="preload" href="/images/logo.png" as="image" />
+        <link rel="preload" href="/images/github-mark.png" as="image" />
+        <link rel="preload" href="/images/In-Blue-128.png" as="image" />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

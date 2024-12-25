@@ -2,13 +2,14 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center">
+    <main className="break-all min-h-screen flex items-center justify-center">
       <div className="p-10">
-        <div>
+        <div className="max-w-2xl mx-auto">
           <p>
             16. Redirecionamentos e Rewrites / Configure redirecionamentos e
             rewrites no arquivo next.config.js.
-          </p><br></br>
+          </p>
+          <br />
           <p>
             Redirecionamentos e rewrites são técnicas usadas para manipular URLs
             em aplicações web.
@@ -22,7 +23,7 @@ export default function Home() {
             Veja abaixo exemplos de redirecionamento e rewrite configurados no
             arquivo next.config.mjs na raíz desse projeto:
           </p>
-          <pre>
+          <pre className="text-xs sm:text-base"> 
             {`
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -48,11 +49,11 @@ const nextConfig = {
 export default nextConfig;
             `}
           </pre>
-          <br></br>
+          <br />
           <Link className="underline hover:text-blue-500" href="/old-page">
             Teste Redirecionamento
           </Link>
-          <br></br>
+          <br />
           <Link className="underline hover:text-blue-500" href="/masked-page">
             Teste Rewrite
           </Link>

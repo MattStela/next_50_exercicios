@@ -12,8 +12,8 @@ export default function Header() {
   ];
 
   return (
-    <header className="pr-20 pl-10 flex flex-row font-mono bg-gradient-to-r from-blue-500 to-black text-white">
-      <div className="relative w-32 h-32 flex justify-center items-center flex-grow hidden sm:flex">
+    <header className="flex flex-row font-mono bg-gradient-to-r from-blue-500 to-black text-white">
+      <div className="relative w-32 h-32 flex justify-end items-center flex-grow hidden sm:flex">
         <a href="https://next-50-exercicios.vercel.app/">
           <Image
             src="/images/logo.png"
@@ -21,13 +21,13 @@ export default function Header() {
             className=""
             width="50"
             height="50"
-            priority
             style={{ width: "auto", height: "auto" }} // Manter a proporção
+            loading="eager"
           />
         </a>
       </div>
 
-      <div className="flex flex-col justify-items items-center flex-grow container mx-auto">
+      <div className="flex flex-col items-center flex-grow container">
         <h1 className="flex items-center flex-grow text-2xl text-center">
           <p className="hidden sm:block">
             <a
@@ -52,6 +52,8 @@ export default function Header() {
             </a>{" "}
             projeto v1.0
           </p>
+
+          
           <p className="sm:hidden">
             <a
               className="hover:underline hover:text-blue-500"
@@ -90,6 +92,7 @@ export default function Header() {
             ))}
           </ul>
           <div className="sm:hidden flex justify-center flex-col items-center relative z-50">
+            
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="p-2 hover:no-underline block transition duration-500 ease-in-out hover:text-black"
