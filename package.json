@@ -24,7 +24,11 @@
 
     "@apollo/client": "^3.12.4",
 
+    "apollo-server": "^3.13.0",
+
     "axios": "^1.7.9",
+
+    "express": "^4.21.2",
 
     "graphql": "^16.10.0",
 

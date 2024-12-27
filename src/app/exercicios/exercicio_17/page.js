@@ -30,8 +30,6 @@ export default function Home() {
   width={500}
   height={500}
   alt="Um panda conversando com um gatito fofíneo"
-  placeholder="blur"
-  blurDataURL="/images/panda_gato_blur.jpg"
 />
           `}
         </pre>
@@ -41,8 +39,7 @@ export default function Home() {
           width={500}
           height={500}
           alt="Um panda conversando com um gatito fofíneo"
-          placeholder="blur" // Placeholder de baixa qualidade
-          blurDataURL="/images/panda_gato_blur.jpg" // Imagem de baixa qualidade para o placeholder
+          loading="eager"
         />
       </div>
     </main>
