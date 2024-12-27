@@ -1,4 +1,6 @@
-export const images = {
-    // Desativa a otimização automática de imagens
-    unoptimized: true,
+module.exports = {
+    images: {
+        // Desativa a otimização automática de imagens
+        unoptimized: true,
+    },
 };

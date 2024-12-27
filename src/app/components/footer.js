@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <div className="bg-gradient-to-r from-blue-500 to-black p-4 text-white font-mono">
+    <div className="bg-gradient-to-t from-blue-500 to-blue-950 p-4 text-white font-mono">
       <div className="container mx-auto flex flex-row space-x-4 items-center justify-center">
         <a href="https://github.com/MattStela">
           <Image
