@@ -18,13 +18,13 @@ const geistMono = Geist_Mono({
 });
 
 export default function RootLayout({ children }) {
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('darkMode') === 'true';
-    }
-    return false;
-  });
+  const [darkMode, setDarkMode] = useState(false);
   const footerRef = useRef(null);
+
+  useEffect(() => {
+    const storedDarkMode = localStorage.getItem('darkMode') === 'true';
+    setDarkMode(storedDarkMode);
+  }, []);
 
   useEffect(() => {
     if (darkMode) {
@@ -33,11 +33,6 @@ export default function RootLayout({ children }) {
       document.documentElement.classList.remove('dark');
     }
   }, [darkMode]);
-
-  useEffect(() => {
-    const storedDarkMode = localStorage.getItem('darkMode') === 'true';
-    setDarkMode(storedDarkMode);
-  }, []);
 
   const toggleDarkMode = (event) => {
     event.preventDefault();

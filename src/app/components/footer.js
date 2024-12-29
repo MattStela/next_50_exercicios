@@ -4,7 +4,7 @@ export default function Footer({ onClick, darkMode }) {
   return (
     <div
       className={`bg-gradient-to-t ${
-        darkMode ? "from-blue-500 to-blue-950" : "from-blue-500 to-white"
+        darkMode ? "from-blue-500 to-blue-950" : "from-blue-500 to-blue-100"
       } text-white font-mono`}
     >
       <div className="flex space-x-4 flex-row items-center justify-center">

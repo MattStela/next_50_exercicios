@@ -14,8 +14,8 @@ export default function Header({ darkMode }) {
   return (
     <header
       className={`flex flex-row font-mono bg-gradient-to-b ${
-        darkMode ? "from-blue-500 to-blue-950" : "from-blue-500 to-white"
-      } text-white`}
+        darkMode ? "from-blue-500 to-blue-950 text-white" : "from-blue-500 to-blue-100 text-black"
+      } `}
     >
       <div className="relative w-32 h-32 flex justify-end items-center">
         <a
