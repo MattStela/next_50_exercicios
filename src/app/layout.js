@@ -20,16 +20,13 @@ const geistMono = Geist_Mono({
 export default function RootLayout({ children }) {
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window !== 'undefined') {
-      const initialMode = localStorage.getItem('darkMode') === 'true';
-      console.log('Initial dark mode from localStorage:', initialMode);
-      return initialMode;
+      return localStorage.getItem('darkMode') === 'true';
     }
     return false;
   });
   const footerRef = useRef(null);
 
   useEffect(() => {
-    console.log('Applying dark mode:', darkMode);
     if (darkMode) {
       document.documentElement.classList.add('dark');
     } else {
@@ -37,23 +34,23 @@ export default function RootLayout({ children }) {
     }
   }, [darkMode]);
 
+  useEffect(() => {
+    const storedDarkMode = localStorage.getItem('darkMode') === 'true';
+    setDarkMode(storedDarkMode);
+  }, []);
+
   const toggleDarkMode = (event) => {
     event.preventDefault();
-    console.log('Current dark mode:', darkMode);
     const newDarkMode = !darkMode;
-    console.log('Toggling dark mode to:', newDarkMode);
     setDarkMode(newDarkMode);
     localStorage.setItem('darkMode', newDarkMode);
     if (footerRef.current) {
-      console.log('Scrolling into view');
       footerRef.current.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      console.log('Footer ref is null');
     }
   };
 
   return (
-    <html lang="en" className={darkMode ? 'dark' : ''}>
+    <html lang="en">
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
@@ -62,9 +59,7 @@ export default function RootLayout({ children }) {
         <link rel="preload" href="/images/github-mark.png" as="image" />
         <link rel="preload" href="/images/In-Blue-128.png" as="image" />
       </Head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased ${darkMode ? 'dark' : ''}`}>
         <Header darkMode={darkMode} />
         <main>{children}</main>
         <div ref={footerRef}>
