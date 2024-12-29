@@ -84,6 +84,7 @@ export default function Home() {
   return (
     <ApolloProvider client={client}>
       <main className="min-h-screen flex items-center justify-center">
+      <title>Exercício 18</title>
         <div className="flex flex-col justify-center items-center p-10">
           <p>18. Exemplo de Apollo Client com GraphQL</p>
           <br></br>

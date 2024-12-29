@@ -21,6 +21,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col min-h-screen justify-center items-center">
+      <title>Exercício 14</title>
       <div className="flex flex-col space-y-4 border border-red-500 p-4 w-60 break-words">
 
         <form onSubmit={handleSubmit} className="flex flex-col space-y-4">

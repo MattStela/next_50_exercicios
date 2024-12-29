@@ -8,7 +8,7 @@ export default function Home() {
       <h1>22. Dark Mode com Tailwind CSS</h1>
       <h2>Implemente um switch de Dark Mode utilizando Tailwind CSS.</h2>
        <p>Demorei 3 dias pra entender os erros diversos que aconteciam. Era pra ser simples, mas eu aprendi que dada a complexidade do projeto, fica extremamente complicado fazer isso acontecer</p>
-      <p>Não acho que eu tenho sanidade pra explicar tudo, então veja a lógica ao clicar na imagem do footer</p>
+      <p>Veja a lógica ao clicar na imagem do footer. Contém uma configuração pra local storage do navegador</p>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 export default function Home() {
   return (
     <main className="min-h-screen flex items-center justify-center">
+      <title>Exercício 15</title>
       <div className="p-10">
         <div>
           

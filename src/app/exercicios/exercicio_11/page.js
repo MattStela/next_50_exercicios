@@ -10,6 +10,7 @@ export default function Home (){
 
     return(
         <main className="flex flex-col justify-center space-y-4 items-center min-h-screen">
+            <title>Exercício 11</title>
             <div>{contador > 10 && contador < 30 ? "Eita, já pode parar" : 
             contador > 29 && contador < 50 ? "não adianta nada ficar apertando": 
             contador > 49 && contador < 70 ? "ainda não vai dar em nada isso":

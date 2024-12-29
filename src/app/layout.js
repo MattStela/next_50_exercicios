@@ -1,21 +1,10 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import { metadata } from './metadata';
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export default function RootLayout({ children }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -54,7 +43,7 @@ export default function RootLayout({ children }) {
         <link rel="preload" href="/images/github-mark.png" as="image" />
         <link rel="preload" href="/images/In-Blue-128.png" as="image" />
       </Head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased ${darkMode ? 'dark' : ''}`}>
+      <body className={`antialiased ${darkMode ? 'dark' : ''}`}>
         <Header darkMode={darkMode} />
         <main>{children}</main>
         <div ref={footerRef}>

@@ -3,6 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="min-h-screen flex items-center justify-center">
+      <title>Exercício 17</title>
       <div className="flex flex-col justify-center items-center p-10">
         <p>
           17. Imagem Otimizada com next/image / Utilize o componente next/image

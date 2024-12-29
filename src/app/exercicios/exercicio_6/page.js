@@ -3,6 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="p-20 border border-pink-500 min-h-screen flex flex-col items-center justify-center">
+      <title>Exercício 6</title>
       <p>
         O Next.js espera que todas as rotas sejam definidas dentro do diretório
         pages que está localizado na raiz do projeto. Portanto, não é possível

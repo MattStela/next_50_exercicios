@@ -2,6 +2,7 @@ import React from "react";
 export default function Home() {
   return (
     <div className="flex flex-col justify-center text-center items-center min-h-screen break-all">
+      <title>Exercício 20</title>
       <div className="w-1/2">
         <h1>
           20. SSR com Apollo Server <br></br>

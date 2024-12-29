@@ -3,6 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="break-all min-h-screen flex items-center justify-center">
+      <title>Exercício 16</title>
       <div className="p-10">
         <div className="max-w-2xl mx-auto">
           <p>

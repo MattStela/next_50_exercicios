@@ -29,6 +29,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex flex-col justify-center items-center">
+      <title>Exercício 19</title>
       <div className="w-3/4 p-10">
         <div className="flex text-center flex-col items-center justify-center space-y-5 font-mono">
           <p>19. Criar API Routes <br></br> Crie rotas de API dentro do diretório `pages/api` e faça uma requisição a partir do cliente.</p>

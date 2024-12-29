@@ -3,6 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="min-h-screen flex items-center justify-center">
+      <title>Exercício 13</title>
       <div className="border p-10">
         <div>
           eu do passado: Ta pedindo vercel, mas vou usar o github pages<br></br>
