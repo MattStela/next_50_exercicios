@@ -2,21 +2,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
+  @apply bg-white text-black dark:bg-black dark:text-white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -25,4 +12,4 @@ img[src="/images/logo.png"] {
   height: auto;
 }
 
-
+/* Outros estilos globais podem ser adicionados aqui */

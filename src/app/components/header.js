@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export default function Header() {
+export default function Header({ darkMode }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const menuItems = [
@@ -12,7 +12,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="flex flex-row font-mono bg-gradient-to-b from-blue-500 to-blue-950 text-white">
+    <header className={`flex flex-row font-mono bg-gradient-to-b ${darkMode ? 'from-blue-500 to-blue-950 text-white' : 'from-blue-500 to-white text-black'} `}>
       <div className="relative w-32 h-32 flex justify-end items-center">
         <a
           className="flex justify-center items-center w-3/4"
